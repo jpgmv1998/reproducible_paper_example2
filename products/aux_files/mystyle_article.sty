@@ -1,0 +1,30 @@
+
+\ProvidesPackage{mystyle_article}
+
+% Formatting (1.5 line spacing)
+\usepackage{setspace}
+	\onehalfspacing
+\usepackage{changepage}
+
+% Adjust page margins
+\usepackage{geometry}
+\geometry{
+  top=1.5in,
+  bottom=1.5in,
+  left=1.5in,
+  right=1.5in
+}
+
+% Font
+\usepackage{palatino} % many other options (eg. tgbonum, times, bookman, lmodern, etc)
+
+% Text Alignment
+\usepackage{ragged2e}
+
+% Page rotation
+\usepackage{pdflscape}
+
+% Math for article
+\newtheorem{definition}{Definition}
+\newtheorem{solution}{Solution}
+\newtheorem{theorem}{Theorem}
