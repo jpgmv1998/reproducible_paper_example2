@@ -1,0 +1,29 @@
+
+> # if the object is spatial (sf class) drop geometry column to simplify the codebook and avoid error in describe
+> if (any(class(raw.muni) == "sf"))  .... [TRUNCATED] 
+. 
+
+ 3  Variables      5570  Observations
+-------------------------------------------------------------------------------------------------------------------------------
+muni_name : municipality name (character, cross-section, IBGE-2015) 
+       n  missing distinct 
+    5570        0     5290 
+
+lowest : ABADIA DE GOIAS     ABADIA DOS DOURADOS ABADIANIA           ABAETE              ABAETETUBA         
+highest: XIQUE-XIQUE         ZABELE              ZACARIAS            ZE DOCA             ZORTEA             
+-------------------------------------------------------------------------------------------------------------------------------
+muni_code : municipality code (7-digit, cross-section, IBGE-2015) 
+       n  missing distinct     Info     Mean      Gmd      .05      .10      .25      .50      .75      .90      .95 
+    5570        0     5570        1  3253591  1114809  1507778  2106191  2512126  3146280  4119190  4319312  5107301 
+
+lowest : 1100015 1100023 1100031 1100049 1100056, highest: 5222005 5222054 5222203 5222302 5300108
+-------------------------------------------------------------------------------------------------------------------------------
+state_uf : state name (2-characters, cross-section, IBGE-2015) 
+       n  missing distinct 
+    5570        0       27 
+
+lowest : AC AL AM AP BA, highest: RS SC SE SP TO
+-------------------------------------------------------------------------------------------------------------------------------
+
+> # end printing console output to text file
+> sink()

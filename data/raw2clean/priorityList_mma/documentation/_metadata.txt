@@ -1,0 +1,10 @@
+* PRIORITY LIST [@mma2017list]
+ * folder file path: "data/raw2clean/priorityList"
+ * content: list of Legal Amazon priority municipalities with entry/exit dates and legal documentation (.pdf files); Brazilian Legal Amazon (extent); 2017 (year of reference)
+ * source: MMA (Ministerio do Meio Ambiente)
+ * original link: http://combateaodesmatamento.mma.gov.br/images/conteudo/lista_municipios_prioritarios_AML_2017.pdf
+ * raw data downloaded on:  SEP/19/2020
+ * web archive link (used for download): https://web.archive.org/web/20200915211728/http://combateaodesmatamento.mma.gov.br/images/conteudo/lista_municipios_prioritarios_AML_2017.pdf
+ * raw data archived on:  SEP/15/2020
+ * notes: used the web archive link to access the pdf file. Manually saved the file in the "input" folder
+ * provided: yes

@@ -1,11 +1,11 @@
 
 # > PROJECT INFO
-# NAME: PROJECT NAME - TEMPLATE
-# LEAD: LEADING AUTHOR(S) NAME(S)
+# NAME: AMAZON PRIORITY MUNICIPALITIES - EXAMPLE
+# LEAD: JOÃO VIEIRA
 #
 # > THIS SCRIPT
-# AIM: MASTERFILE SCRIPT TO RUN ALL RAW2CLEAN SCRIPTS - TEMPLATE
-# AUTHOR: SCRIPT AUTHOR(S) NAME(S)
+# AIM: MASTERFILE SCRIPT TO RUN ALL RAW2CLEAN SCRIPTS - EXAMPLE
+# AUTHOR: JOÃO VIEIRA
 #
 # > NOTES
 # 1: -
@@ -21,7 +21,7 @@ source("code/setup.R")
 
 
 # START TIMER
-tictoc::tic(msg = "_masterfile_raw2clean.R script", log = T)
+tictoc::tic(msg = "masterfile_raw2clean.R script", log = T)
 
 
 
@@ -29,8 +29,29 @@ tictoc::tic(msg = "_masterfile_raw2clean.R script", log = T)
 
 # RUN RAW2CLEAN SCRIPTS ------------------------------------------------------------------------------------------------------------------------------
 
-# SHORT DESCRIPTION
-source(file = here::here("code/raw2clean/datasetName_dataSource.R"), encoding = "UTF-8", echo = T)
+# CLEAN RAW DATA SHAPEFILE OF BIOME DIVISION (IBGE-2019)
+source(file = here::here("code/raw2clean/biomeDivision_raw2clean.R"), encoding = "UTF-8", echo = T)
+
+# clear all objects from global environment
+rm(list = ls())
+
+
+# CLEAN RAW DATA SHAPEFILE OF MUNI DIVISION (IBGE-2015)
+source(file = here::here("code/raw2clean/muniDivision_raw2clean.R"), encoding = "UTF-8", echo = T)
+
+# clear all objects from global environment
+rm(list = ls())
+
+
+# EXTRACT AMAZON PRIORITY MUNI DATA FROM PDF AND CLEAN IT (MMA-2017)
+source(file = here::here("code/raw2clean/priorityList_raw2clean.R"), encoding = "UTF-8", echo = T)
+
+# clear all objects from global environment
+rm(list = ls())
+
+
+# CLEAN RAW PRODES LAND COVER DATA FROM THE BRAZILIAN AMAZON AT THE MUNICIPALITY LEVEL (INPE-2020)
+source(file = here::here("code/raw2clean/prodesAmazon_raw2clean.R"), encoding = "UTF-8", echo = T)
 
 # clear all objects from global environment
 rm(list = ls())
@@ -50,6 +71,7 @@ source(here::here("code/_functions/ExportTimeProcessing.R"))
 
 # export time to csv table
 ExportTimeProcessing("code/raw2clean")
+
 
 
 
