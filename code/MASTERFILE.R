@@ -1,11 +1,11 @@
 
 # > PROJECT INFO
-# NAME: PROJECT NAME - TEMPLATE
-# LEAD: LEADING AUTHOR(S) NAME(S)
+# NAME: AMAZON PRIORITY MUNICIPALITIES - EXAMPLE
+# LEAD: JOÃO VIEIRA
 #
 # > THIS SCRIPT
-# AIM: MASTERFILE SCRIPT TO RUN ALL SUBFOLDER MASTERFILES - TEMPLATE
-# AUTHOR: SCRIPT AUTHOR(S) NAME(S)
+# AIM: MASTERFILE SCRIPT TO RUN ALL SUBFOLDER MASTERFILES
+# AUTHOR: JOÃO VIEIRA
 #
 # > NOTES
 # 1: -
@@ -37,14 +37,14 @@ rm(list = ls())
 
 
 # RUN PROJECT-SPECIFIC SCRIPTS
-source(file = here::here("code/raw2clean/masterfile_projectSpecific.R"), encoding = "UTF-8", echo = T)
+source(file = here::here("code/projectSpecific/masterfile_projectSpecific.R"), encoding = "UTF-8", echo = T)
 
 # clear all objects from global environment
 rm(list = ls())
 
 
 # RUN ANALYSIS SCRIPTS
-source(file = here::here("code/raw2clean/masterfile_analysis.R"), encoding = "UTF-8", echo = T)
+source(file = here::here("code/analysis/masterfile_analysis.R"), encoding = "UTF-8", echo = T)
 
 # clear all objects from global environment
 rm(list = ls())

@@ -51,7 +51,7 @@ panel.prodesAmazon.muniLevel <- readRDS(file = here::here("data/projectSpecific/
 # DATA MANPULATION -----------------------------------------------------------------------------------------------------------------------------------
 
 # MERGE SAMPLE WITH ADDITIONAL VARIABLES
-panel.forAnalysis.muniLevel <-
+panel.sampleForAnalysis.muniLevel <-
   panel.sample.muniLevel %>%
   dplyr::left_join(panel.priorityList.muniLevel, by = c("muni_code", "year")) %>%
   dplyr::left_join(panel.prodesAmazon.muniLevel, by = c("muni_code", "year"))
@@ -62,8 +62,8 @@ rm(panel.sample.muniLevel, panel.priorityList.muniLevel, panel.prodesAmazon.muni
 
 # FINAL SAMPLE SELECTION
 # drop municipalities with no PRODES data
-panel.forAnalysis.muniLevel <-
-  panel.forAnalysis.muniLevel %>%
+panel.sampleForAnalysis.muniLevel <-
+  panel.sampleForAnalysis.muniLevel %>%
   dplyr::filter(!is.na(prodesAmazon_deforestAccumulated))
 
 
@@ -74,21 +74,21 @@ panel.forAnalysis.muniLevel <-
 
 # LABELS
 # check existing labels
-sjlabelled::get_label(panel.forAnalysis.muniLevel)
+sjlabelled::get_label(panel.sampleForAnalysis.muniLevel)
 
 # add labels when missing
-sjlabelled::set_label(panel.forAnalysis.muniLevel$year) <- "year of reference, calendar from Jan/t to Dec/t or PRODES from Aug/t-1 to Jul/t (4-digits, panel)"
+sjlabelled::set_label(panel.sampleForAnalysis.muniLevel$year) <- "year of reference, calendar from Jan/t to Dec/t or PRODES from Aug/t-1 to Jul/t (4-digits, panel)"
 
 
 # POST-TREATMENT OVERVIEW
-# summary(panel.forAnalysis.muniLevel)
+# summary(panel.sampleForAnalysis.muniLevel)
 
 
 # OTHER EXPORT FORMATS
 
 # add spatial dimension
-spatial.forAnalysis.muniLevel <-
-  panel.forAnalysis.muniLevel %>%
+spatial.sampleForAnalysis.muniLevel <-
+  panel.sampleForAnalysis.muniLevel %>%
   dplyr::left_join(spatial.sample.muniLevel) %>%
   sf::st_as_sf()
 
@@ -98,11 +98,11 @@ spatial.forAnalysis.muniLevel <-
 
 # EXPORT ---------------------------------------------------------------------------------------------------------------------------------------------
 
-saveRDS(panel.forAnalysis.muniLevel,
-        file = here::here("data/projectSpecific/muniLevel", "panel_forAnalysis_muniLevel.rds"))
+saveRDS(panel.sampleForAnalysis.muniLevel,
+        file = here::here("data/projectSpecific/muniLevel", "panel_sampleForAnalysis_muniLevel.rds"))
 
-saveRDS(spatial.forAnalysis.muniLevel,
-        file = here::here("data/projectSpecific/muniLevel", "spatial_forAnalysis_muniLevel.rds"))
+saveRDS(spatial.sampleForAnalysis.muniLevel,
+        file = here::here("data/projectSpecific/muniLevel", "spatial_sampleForAnalysis_muniLevel.rds"))
 
 
 # END TIMER

@@ -85,8 +85,14 @@ groundhog::groundhog.library("janitor", groundhog.date)
 # ref: (https://stackoverflow.com/questions/17376939/problems-when-trying-to-load-a-package-in-r-due-to-rjava)
 groundhog::groundhog.library("tabulizer", groundhog.date)
 
+# did - to use Callaway and Sant'Anna (2021) new DiD estimators
+groundhog::groundhog.library("did", groundhog.date)
 
+# kableExtra - to create beautiful and flexible tables in R
+groundhog::groundhog.library("kableExtra", groundhog.date)
 
+# modelsummary - to create and customize tables of model output
+groundhog::groundhog.library("modelsummary", groundhog.date)
 
 
 # SOURCE FUNCTIONS -----------------------------------------------------------------------------------------------------------------------------------

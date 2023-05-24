@@ -1,11 +1,11 @@
 
 # > PROJECT INFO
-# NAME: PROJECT NAME - TEMPLATE
-# LEAD: LEADING AUTHOR(S) NAME(S)
+# NAME: AMAZON PRIORITY MUNICIPALITIES - EXAMPLE
+# LEAD: JOÃO VIEIRA
 #
 # > THIS SCRIPT
-# AIM: GENERATE FIGURE 1 NAME - TEMPLATE
-# AUTHOR: SCRIPT AUTHOR(S) NAME(S)
+# AIM: GENERATE FIGURE A1: UNBALANCED EVENT-STUDY PLOT
+# AUTHOR: JOÃO VIEIRA
 #
 # > NOTES
 # 1: -
@@ -21,7 +21,7 @@ source("code/setup.R")
 
 
 # START TIMER
-tictoc::tic(msg = "fig1_name_analysis.R script", log = T)
+tictoc::tic(msg = "figA1_eventStudyUnbalanced_analysis.R script", log = T)
 
 
 
@@ -29,6 +29,8 @@ tictoc::tic(msg = "fig1_name_analysis.R script", log = T)
 
 # DATA INPUT -----------------------------------------------------------------------------------------------------------------------------------------
 
+# load balanced event-study output
+reg.did.eventStudyUnbalanced <- readRDS(file = here::here("data/analysis/regressions/reg_did_eventStudyUnbalanced.rds"))
 
 
 
@@ -36,6 +38,20 @@ tictoc::tic(msg = "fig1_name_analysis.R script", log = T)
 
 # GENERATE FIGURE ------------------------------------------------------------------------------------------------------------------------------------
 
+# FIGURE 1: BALANCED EVENT-STUDY PLOT
+plot.did.eventStudyUnbalanced <-
+  reg.did.eventStudyUnbalanced %>%
+  did::ggdid()
+
+
+
+
+
+# EXPORT ---------------------------------------------------------------------------------------------------------------------------------------------
+
+ggplot2::ggsave(plot = plot.did.eventStudyUnbalanced,
+                filename = here::here(glue::glue("results/figures/figA1_eventStudyUnbalanced.png")),
+                width = 12, height = 6, dpi = 300)
 
 
 # END TIMER

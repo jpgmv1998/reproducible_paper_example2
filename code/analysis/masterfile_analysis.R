@@ -1,11 +1,11 @@
 
 # > PROJECT INFO
-# NAME: PROJECT NAME - TEMPLATE
-# LEAD: LEADING AUTHOR(S) NAME(S)
+# NAME: AMAZON PRIORITY MUNICIPALITIES - EXAMPLE
+# LEAD: JOÃO VIEIRA
 #
 # > THIS SCRIPT
-# AIM: MASTERFILE SCRIPT TO RUN ALL ANALYSIS SCRIPTS - TEMPLATE
-# AUTHOR: SCRIPT AUTHOR(S) NAME(S)
+# AIM: MASTERFILE SCRIPT TO RUN ALL ANALYSIS SCRIPTS
+# AUTHOR: JOÃO VIEIRA
 #
 # > NOTES
 # 1: -
@@ -21,7 +21,7 @@ source("code/setup.R")
 
 
 # START TIMER
-tictoc::tic(msg = "_masterfile_analysis.R script", log = T)
+tictoc::tic(msg = "masterfile_analysis.R script", log = T)
 
 
 
@@ -29,7 +29,7 @@ tictoc::tic(msg = "_masterfile_analysis.R script", log = T)
 # RUN ALL REGRESSIONS --------------------------------------------------------------------------------------------------------------------------------
 
 # RUN REGRESSION NAME
-source(here::here("code/analysis/regression_name_analysis.R"), encoding = "UTF-8", echo = T)
+source(here::here("code/analysis/regression_did_analysis.R"), encoding = "UTF-8", echo = T)
 
 # clear all objects from global environment
 rm(list = ls())
@@ -47,32 +47,27 @@ source(here::here("code/analysis/supportingStats_analysis.R"), encoding = "UTF-8
 rm(list = ls())
 
 
-# GENERATE FIGURE 1 NAME
-source(here::here("code/analysis/fig1_name_analysis.R"), encoding = "UTF-8", echo = T)
+# GENERATE FIGURE 1: BALANCED EVENT-STUDY
+source(here::here("code/analysis/fig1_eventStudyBalanced_analysis.R"), encoding = "UTF-8", echo = T)
 
 # clear all objects from global environment
 rm(list = ls())
 
 
-# GENERATE TABLE 1 NAME
-source(here::here("code/analysis/tab1_name_analysis.R"), encoding = "UTF-8", echo = T)
+# GENERATE TABLE 1: SUMMARY STATISTCS BY TREATMENT COHORT
+source(here::here("code/analysis/tab1_summaryStat_analysis.R"), encoding = "UTF-8", echo = T)
 
 # clear all objects from global environment
 rm(list = ls())
+
+
 
 
 
 # RUN PAPER APPENDIX RESULTS ---------------------------------------------------------------------------------------------------------------------------
 
-# GENERATE FIGURE A1 NAME
-source(here::here("code/analysis/figA1_name_analysis.R"), encoding = "UTF-8", echo = T)
-
-# clear all objects from global environment
-rm(list = ls())
-
-
-# GENERATE TABLE A1 NAME
-source(here::here("code/analysis/tabA1_name_analysis.R"), encoding = "UTF-8", echo = T)
+# GENERATE FIGURE A1: UNBALANCED EVENT-STUDY
+source(here::here("code/analysis/figA1_eventStudyUnbalanced_analysis.R"), encoding = "UTF-8", echo = T)
 
 # clear all objects from global environment
 rm(list = ls())
