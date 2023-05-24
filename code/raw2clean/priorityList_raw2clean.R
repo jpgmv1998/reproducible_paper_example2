@@ -73,14 +73,14 @@ raw.priorityList1 <-
   raw.priorityList1 %>%
   dplyr::rename(state_uf = "uf",
                 muni_name = "nome",
-                entry_year = "ano_de_entrada",
-                entry_lawOrdinance = "portaria_de_entrada")
+                priorityList_entryYear = "ano_de_entrada",
+                priorityList_entryLawOrdinance = "portaria_de_entrada")
 
 # add empty columns to match with table from page 2
 raw.priorityList1 <-
   raw.priorityList1 %>%
-  dplyr::mutate(exit_year  = as.numeric(NA),
-                exit_lawOrdinance = as.character(NA))
+  dplyr::mutate(priorityList_exitYear  = as.numeric(NA),
+                priorityList_exitLawOrdinance = as.character(NA))
 
 # class - no need of change
 lapply(raw.priorityList1, class)
@@ -112,10 +112,10 @@ raw.priorityList2 <-
   raw.priorityList2 %>%
   dplyr::rename(state_uf = "uf",
                 muni_name = "nome",
-                entry_year = "ano_de",
-                entry_lawOrdinance = "portaria_de_entrada",
-                exit_year = "ano_de_1",
-                exit_lawOrdinance = "portaria_de_saida")
+                priorityList_entryYear = "ano_de",
+                priorityList_entryLawOrdinance = "portaria_de_entrada",
+                priorityList_exitYear = "ano_de_1",
+                priorityList_exitLawOrdinance = "portaria_de_saida")
 
 # class - no need of change
 lapply(raw.priorityList2, class)
@@ -166,10 +166,10 @@ rm(raw.priorityList1, raw.priorityList2)
 # LABELS
 sjlabelled::set_label(raw.priorityList$state_uf)                       <- "state name (2-characters, cross-section, MMA-2017)"
 sjlabelled::set_label(raw.priorityList$muni_name)                      <- "municipality name (character, cross-section, MMA-2017)"
-sjlabelled::set_label(raw.priorityList$priorityList_entryYear)         <- "year when the municipality was placed on the priority list (numeric, cross-section, MMA-2017)"
-sjlabelled::set_label(raw.priorityList$priorityList_entryLawOrdinance) <- "law ordinance name that placed the municipality on the priority list (character, cross-section, MMA-2017)"
-sjlabelled::set_label(raw.priorityList$priorityList_exitYear)          <- "year when the municipality was removed from the priority list, NA = not removed (numeric, cross-section, MMA-2017)"
-sjlabelled::set_label(raw.priorityList$priorityList_exitLawOrdinance)  <- "law ordinance name that removed the municipality from the priority list, NA = not removed (character, cross-section, MMA-2017)"
+sjlabelled::set_label(raw.priorityList$priorityList_entryYear)         <- "year when the municipality was placed on the priority list, NA = never placed (4-digits, cross-section, MMA-2017)"
+sjlabelled::set_label(raw.priorityList$priorityList_entryLawOrdinance) <- "law ordinance name that placed the municipality on the priority list, NA = never placed (character, cross-section, MMA-2017)"
+sjlabelled::set_label(raw.priorityList$priorityList_exitYear)          <- "year when the municipality was removed from the priority list, NA = never removed (4-digits, cross-section, MMA-2017)"
+sjlabelled::set_label(raw.priorityList$priorityList_exitLawOrdinance)  <- "law ordinance name that removed the municipality from the priority list, NA = never removed (character, cross-section, MMA-2017)"
 
 
 # POST-TREATMENT OVERVIEW

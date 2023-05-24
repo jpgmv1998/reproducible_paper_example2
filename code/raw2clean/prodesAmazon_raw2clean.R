@@ -127,13 +127,13 @@ sjlabelled::set_label(raw.prodesAmazon$muni_name) <- "municipality name (charact
 sjlabelled::set_label(raw.prodesAmazon$state_uf)  <- "state name (2-characters, cross-section, INPE-2020)"
 sjlabelled::set_label(raw.prodesAmazon$muni_area) <- "municipality area (square kilometers, cross-section, INPE-2020)"
 sjlabelled::set_label(raw.prodesAmazon$year)      <- "PRODES year, starts in August/t-1 and ends in July/t with t = calendar year (4-digits, panel, INPE-2020)"
-sjlabelled::set_label(raw.prodesAmazon$prodesAmazon_deforestAccumulated) <- "accumulated deforestation area (square kilometers, panel, INPE-2019)"
-sjlabelled::set_label(raw.prodesAmazon$prodesAmazon_deforestIncrement)   <- "incremental deforestation area (square kilometers, panel, INPE-2019)"
-sjlabelled::set_label(raw.prodesAmazon$prodesAmazon_forest)   <- "remaining primary forest area (square kilometers, panel, INPE-2019)"
-sjlabelled::set_label(raw.prodesAmazon$prodesAmazon_cloud)               <- "area covered by clouds during remote sensing (square kilometers, panel, INPE-2019)"
-sjlabelled::set_label(raw.prodesAmazon$prodesAmazon_nonObserved)         <- "area blocked from view during remote sensing (square kilometers, panel, INPE-2019)"
-sjlabelled::set_label(raw.prodesAmazon$prodesAmazon_nonForest)           <- "area originally covered by non-tropical forest vegetation (square kilometers, cross-section, INPE-2019)"
-sjlabelled::set_label(raw.prodesAmazon$prodesAmazon_hidrography)         <- "area covered by bodies of water (square kilometers, cross-section, INPE-2019)"
+sjlabelled::set_label(raw.prodesAmazon$prodesAmazon_deforestAccumulated) <- "accumulated deforestation area (square kilometers, panel, INPE-2020)"
+sjlabelled::set_label(raw.prodesAmazon$prodesAmazon_deforestIncrement)   <- "incremental deforestation area (square kilometers, panel, INPE-2020)"
+sjlabelled::set_label(raw.prodesAmazon$prodesAmazon_forest)   <- "remaining primary forest area (square kilometers, panel, INPE-2020)"
+sjlabelled::set_label(raw.prodesAmazon$prodesAmazon_cloud)               <- "area covered by clouds during remote sensing (square kilometers, panel, INPE-2020)"
+sjlabelled::set_label(raw.prodesAmazon$prodesAmazon_nonObserved)         <- "area blocked from view during remote sensing (square kilometers, panel, INPE-2020)"
+sjlabelled::set_label(raw.prodesAmazon$prodesAmazon_nonForest)           <- "area originally covered by non-tropical forest vegetation (square kilometers, cross-section, INPE-2020)"
+sjlabelled::set_label(raw.prodesAmazon$prodesAmazon_hidrography)         <- "area covered by bodies of water (square kilometers, cross-section, INPE-2020)"
 
 
 # POST-TREATMENT OVERVIEW
