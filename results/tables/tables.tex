@@ -1,16 +1,16 @@
 
 % TABLES
 
-% \begin{table}[H]
-% \caption{Title}
-% \centering
-% \scalebox{1}{
-% \begin{threeparttable}
-%     %\input{tab1_name.tex}
-% \begin{tablenotes}[flushleft]
-% \item \footnotesize \textit{Notes}: .
-% \item \footnotesize \textit{Data Sources}: .
-% \end{tablenotes}
-% \end{threeparttable}}
-% \label{tab:}
-% \end{table}
+\begin{table}[H]
+\caption{Summary Statistics by Treatment Cohort}
+\centering
+\scalebox{0.6}{
+\begin{threeparttable}
+    \input{../../results/tables/tab1_summaryStat.tex}
+\begin{tablenotes}[flushleft]
+\item \footnotesize \textit{Notes}: .
+\item \footnotesize \textit{Data Sources}: \citep{ibge2015muni, mma2017list, ibge2019biome, inpe2020prodes}.
+\end{tablenotes}
+\end{threeparttable}}
+\label{tab:summaryStat}
+\end{table}

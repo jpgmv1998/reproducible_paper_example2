@@ -9,19 +9,19 @@
 
 % Title Page
 \begin{titlepage}
-\title{\Large \textbf{Title}\\ \large \textbf{Subtitle}\thanks{We thank ... Person 1, Person 2, and audiences at Place 1, Conference 1, for helpful comments and suggestions. Any errors are our own. Financial support for this research came, in part, from Funder 1 and Funder 2.}}
-\author{Author Name 1\thanks{Department of Economics, Institution. E-mail: X} \\ \large Institution \and Author Name 2\thanks{Department of Economics, Institution. E-mail: Y} \\ \large Institution}
+\title{\Large \textbf{Example for the Reproducible Paper Template:}\\ \large \textbf{Amazon Priority Municipalities}\thanks{This is just an application of the Reproducible Paper Template. The analysis presented is just an illustration.}}
+\author{João Pedro Vieira\thanks{Department of Economics, PUC-Rio. E-mail: jpgmv1998@hotmail.com} \\ \large PUC-Rio}
 \date{\today}
 
 \maketitle
 
 \begin{abstract}
-\noindent  \\ % X words
+\noindent This is just an application of the Reproducible Paper Template. The analysis presented is just an illustration.  \\ % X words
 
 % Long version of abstract (X words):
 
-\noindent\textit{Keywords:} keyword1, keyword2, keyword3, keyword4 \\
-\noindent\textit{JEL Codes:} jel1, jel2, jel3, jel4 \\
+\noindent\textit{Keywords:} reproducibility \\
+\noindent\textit{JEL Codes:} \\
 \end{abstract}
 \setcounter{page}{0}
 \thispagestyle{empty}
@@ -31,15 +31,19 @@
 % Introduction
 \section{Introduction} \label{sec:introduction}
 
+\citep{assunccao2019getting}
+
 \setlength{\parskip}{0.5em} % increase space across paragraphs
 %\setlength{\parindent}{0cm} % adjust paragraph indentation
-
 
 % Institutional Context
 \section{Institutional Context} \label{sec:institutional}
 
 % Data
 \section{Data} \label{sec:data}
+
+\citep{ibge2015muni, ibge2019biome, mma2017list, inpe2020prodes}
+
 
 % Empirical Strategy
 
@@ -54,7 +58,7 @@
 % References
 \newpage
 \bibliographystyle{apalike}
-\bibliography{../../references/references_bib.bib}
+\bibliography{../../references/references_literature.bib, ../../references/references_data.bib, ../../references/references_software.bib}
 \pagebreak
 
 % Figures
@@ -79,7 +83,7 @@
 \setcounter{figure}{0}
 \setcounter{table}{0}
 \setcounter{footnote}{0}
-\input{_template_appendix_paper.tex}
+\input{appendix_paper.tex}
 
 \end{document}
 

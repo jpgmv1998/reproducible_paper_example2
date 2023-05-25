@@ -1,0 +1,60 @@
+---
+title: "Prelimary Results for:"
+subtitle: "Example for the Reproducible Paper Template: Amazon Priority Municipalities"
+author: 
+   - João Pedro Vieira$^1$
+institute: 
+   - $^1$PUC-Rio
+date: "May, 2023"
+output: 
+  beamer_presentation:
+    slide_level: 1
+    theme: "Berlin"
+    colortheme: "spruce"
+    keep_tex: true
+    includes: 
+      in_header: "../aux_files/preamble_slides.tex"
+classoption: "aspectratio=169"
+section-titles: true  # add Appendix section title transition slide
+urlcolor: blue
+bibliography: 
+  - "../../references/references_literature.bib"
+  - "../../references/references_data.bib"
+  - "../../references/references_software.bib"
+---
+
+```{r setup, include=FALSE}
+# RUN 'setup.R' TO CONFIGURE INITIAL SETUP (mostly installing/loading packages)
+source("../../code/setup.R")
+
+
+# KNITR OPTIONS 
+knitr::opts_chunk$set(fig.pos = 'H!', warning = F, message = F, echo = F, include = T, fig.align = 'center', fig.height = 6, fig.width = 9)
+```
+
+
+# Balanced Event-Study
+
+\begin{figure}
+  \includegraphics[width=\textwidth]{`r here::here("results/figures/fig1_eventStudyBalanced.png")`}
+\label{fig:eventStudyBalanced}
+\end{figure}
+
+# Summary Statistics by Treatment Cohort
+
+\vspace{-0.5cm}
+
+\begin{table}[H]
+\centering
+\scalebox{0.6}{
+    \input{`r here::here("results/tables/tab1_summaryStat.tex")`}
+}
+\label{tab:summaryStat}
+\end{table}
+
+# Unbalanced Event-Study
+
+\begin{figure}
+  \includegraphics[width=\textwidth]{`r here::here("results/figures/figA1_eventStudyUnbalanced.png")`}
+\label{fig:eventStudyUnbalanced}
+\end{figure}

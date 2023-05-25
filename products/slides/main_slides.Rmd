@@ -1,0 +1,138 @@
+---
+title: "Example for the Reproducible Paper Template:"
+subtitle: "Amazon Priority Municipalities"
+author: 
+   - João Pedro Vieira$^1$
+institute: 
+   - $^1$PUC-Rio
+date: "May, 2023"
+output: 
+  beamer_presentation:
+    slide_level: 2
+    theme: "Berlin"
+    colortheme: "spruce"
+    keep_tex: true
+    includes: 
+      in_header: "../aux_files/preamble_slides.tex"
+classoption: "aspectratio=169"
+section-titles: true  # add Appendix section title transition slide
+urlcolor: blue
+bibliography: 
+  - "../../references/references_literature.bib"
+  - "../../references/references_data.bib"
+  - "../../references/references_software.bib"
+---
+
+```{r setup, include=FALSE}
+# RUN 'setup.R' TO CONFIGURE INITIAL SETUP (mostly installing/loading packages)
+source("../../code/setup.R")
+
+
+# KNITR OPTIONS 
+knitr::opts_chunk$set(fig.pos = 'H!', warning = F, message = F, echo = F, include = T, fig.align = 'center', fig.height = 6, fig.width = 9)
+```
+
+
+# Introduction 
+
+## Motivation 
+
+\label{motivation}
+
+## This paper
+
+\label{thisPaper}
+
+## Preview of results
+
+\label{previewResults}
+
+
+## Related literature
+
+- **Amazon Priority List** 
+  - \begingroup \footnotesize\color{gray} @assunccao2019getting \endgroup
+  - **Contribution**: Use o new DiD estimator [@R-did]
+
+# Institutional context
+
+# Data
+
+## Main datasets
+
+- **Biomes Division** [@ibge2019biome]
+
+- **Municipality Division** [@ibge2015muni]
+
+- **Priority List** [@mma2017list]
+
+- **PRODES** [@inpe2020prodes]
+
+## Summary Statistics by Treatment Cohort
+
+\vspace{-0.5cm}
+
+\begin{table}[H]
+\scalebox{0.6}{
+    \input{`r here::here("results/tables/tab1_summaryStat.tex")`}
+}
+\label{tab:summaryStat}
+\end{table}
+
+# Empirical strategy
+
+# Results  
+
+## Balanced Event-Study \hyperlink{unbalanced}{\beamerbutton{Unbalanced}}
+
+\label{balanced}
+
+\begin{figure}
+  \includegraphics[width=\textwidth]{`r here::here("results/figures/fig1_eventStudyBalanced.png")`}
+\end{figure}
+
+
+## Robustness exercises
+
+\label{robustness}
+
+
+# Conclusion
+
+## Summary 
+
+\label{conclusion}
+
+## Policy implications
+  
+
+``` {=latex}
+\newcounter{finalframe}
+\setcounter{finalframe}{\value{framenumber}}
+\end{frame}
+
+\begin{frame}[plain]
+\begin{center}
+\Large Thank you
+\end{center}
+\end{frame}
+
+\appendix
+\begin{frame}[allowframebreaks]{References}
+```
+
+
+\tiny
+
+<div id="refs"></div>
+
+
+## Unbalanced Event-Study \hyperlink{balanced}{\beamerbutton{Back}}
+
+\label{unbalanced}
+
+\begin{figure}
+   \includegraphics[width=\textwidth]{`r here::here("results/figures/figA1_eventStudyUnbalanced.png")`}
+\end{figure}
+
+\backupend

@@ -87,7 +87,7 @@ tab1[15,1] <- "Municipalities (\\#)"
 tab1 %>%
   kableExtra::kbl(booktabs = TRUE, escape = FALSE, linesep = c(rep("", 19), "\\addlinespace"), format = "latex", align = "lcccccc") %>%
   kableExtra::add_header_above(c("", "Treatment" = 5, "Control" = 1)) %>%
-  kableExtra::column_spec(2:6, "2cm") %>%
+  kableExtra::column_spec(2:7, "1.75cm") %>%
   kableExtra::row_spec(14, hline_after = TRUE) %>%
   kableExtra::save_kable(file = here::here("results/tables/tab1_summaryStat.tex"))
 
