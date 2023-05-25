@@ -17,7 +17,7 @@ knit: (function(inputFile, encoding) {
 
 > IMPORTANT DISCLAIMER: This is just an application of the Reproducible Paper Template. The analysis presented is just an illustration.
 
-> IMPORTANT OBSERVATION: This README is written as if all data files were included in the replication package. However, because GitHub has a hard limit of 100 Mb for individual files, it was impossible to include all data files. If you want a complete version (including all data files), see the repository uploaded at Zenodo [@].
+> IMPORTANT OBSERVATION: This README is written as if all data files were included in the replication package. However, because GitHub has a hard limit of 100 Mb for individual files, it was impossible to include all data files. If you want a complete version (including all data files), see the repository uploaded at Zenodo [@vieira2023example].
 
 
 Overview
@@ -84,7 +84,7 @@ The data is licensed under a Creative Commons Attribution 4.0 International Publ
 
 - [X] All data **are** publicly available.
 
-The data used to support the findings of this study comes from multiple data sources; all of them are publicly available online and have been deposited in a Zenodo repository [@]. Each raw dataset is listed and described in more detail below. Access to download from the original source is guaranteed by providing a persistent link, using the Save a Page feature from Archive.org, pointing directly to the data download.
+The data used to support the findings of this study comes from multiple data sources; all of them are publicly available online and have been deposited in a Zenodo repository [@vieira2023example]. Each raw dataset is listed and described in more detail below. Access to download from the original source is guaranteed by providing a persistent link, using the Save a Page feature from Archive.org, pointing directly to the data download.
 
 ### Details on each Data Source
 
@@ -217,6 +217,7 @@ Instructions to Replicators
 ---------------------------
 
 - Download the replication package.
+- Download R 4.3.0 (strongly recommended).
 - Open RStudio using `"reproducible_paper_example2.Rproj"` to set the working directory to the project root.
 - Run `"code/MASTERFILE.R"` to run all R scripts in sequence, including the initial setup.
   - Skipping individual R programs will not prevent others from running correctly because all intermediate datasets are available. However, you should manually adjust the folder-specific master files to remove the scripts you do not want to run.
