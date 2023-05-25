@@ -721,17 +721,46 @@ regressions and generate all supporting statistics, tables, and figures
 <div id="instructions-to-replicators" class="section level2">
 <h2>Instructions to Replicators</h2>
 <ul>
-<li>Download the replication package.</li>
-<li>Download R 4.3.0 (strongly recommended).</li>
+<li>(Only in the first time) Download the replication package.</li>
+<li>(Only in the first time) Download R 4.3.0 (strongly
+recommended).</li>
 <li>Open RStudio using <code>&quot;reproducible_paper_example2.Rproj&quot;</code>
 to set the working directory to the project root.</li>
+<li>(Only in the first time) Run <code>&quot;code/setup.R&quot;</code> to install
+all the necessary R packages with the same version as when it was last
+run.
+<ul>
+<li><code>&quot;groundhog&quot;</code> might give the following message
+<code>&quot;IMPORTANT. R does not have a personal library to save packages to. The default location for it is: &#39;C:\Users\username\AppData\Local/R/win-library/4.3&#39;. 1) Type &#39;create&#39; to create that directory 2) Otherwise type &#39;stop&#39;&quot;</code>.
+Answer with <code>create</code> in the console to proceed;</li>
+<li>Package <code>tabulizer</code> might require installing Java 64-bits
+(<a href="https://stackoverflow.com/questions/17376939/problems-when-trying-to-load-a-package-in-r-due-to-rjava" class="uri">https://stackoverflow.com/questions/17376939/problems-when-trying-to-load-a-package-in-r-due-to-rjava</a>)</li>
+<li>In some cases Rtools might be necessary (<a href="https://groundhogr.com/rtools/" class="uri">https://groundhogr.com/rtools/</a>);</li>
+<li>In some cases re-running the script might solve possible
+installation issues.</li>
+</ul></li>
 <li>Run <code>&quot;code/MASTERFILE.R&quot;</code> to run all R scripts in
-sequence, including the initial setup.
+sequence.
 <ul>
 <li>Skipping individual R programs will not prevent others from running
 correctly because all intermediate datasets are available. However, you
 should manually adjust the folder-specific master files to remove the
 scripts you do not want to run.</li>
+</ul></li>
+<li>If you want to re-compile the .tex and .Rmd files in the products
+folder you might need to do the following:
+<ul>
+<li>In Tools &gt; Project Options… &gt; Sweave &gt; select
+<code>pdfLaTeX</code> for Typset LaTeX;</li>
+<li>If there is already a LaTeX distribution installed but rendering
+.tex and .Rmd files is not working, a possible solution is to install
+the same tinytex version as used in the template
+<code>tinytex::install_tinytex(version = &quot;2023.05&quot;)</code>;</li>
+<li>If you encounter missing package errors when compiling to pdf a
+useful solution is to run
+<code>tinytex::parse_install(here::here(&quot;products/paper/main_paper.log&quot;))</code>
+in R (substituting the file name and path with the relevant for your
+case).</li>
 </ul></li>
 </ul>
 </div>

@@ -216,11 +216,20 @@ The code is licensed under a Modified BSD License. See [LICENSE.txt](LICENSE.txt
 Instructions to Replicators
 ---------------------------
 
-- Download the replication package.
-- Download R 4.3.0 (strongly recommended).
+- (Only in the first time)  Download the replication package.
+- (Only in the first time)  Download R 4.3.0 (strongly recommended).
 - Open RStudio using `"reproducible_paper_example2.Rproj"` to set the working directory to the project root.
-- Run `"code/MASTERFILE.R"` to run all R scripts in sequence, including the initial setup.
+- (Only in the first time) Run `"code/setup.R"` to install all the necessary R packages with the same version as when it was last run.
+  - `"groundhog"` might give the following message `"IMPORTANT. R does not have a personal library to save packages to. The default location for it is: 'C:\Users\username\AppData\Local/R/win-library/4.3'. 1) Type 'create' to create that directory 2) Otherwise type 'stop'"`. Answer with `create` in the console to proceed;
+  - Package `tabulizer` might require installing Java 64-bits (https://stackoverflow.com/questions/17376939/problems-when-trying-to-load-a-package-in-r-due-to-rjava)
+  - In some cases Rtools might be necessary (https://groundhogr.com/rtools/);
+  - In some cases re-running the script might solve possible installation issues.
+- Run `"code/MASTERFILE.R"` to run all R scripts in sequence.
   - Skipping individual R programs will not prevent others from running correctly because all intermediate datasets are available. However, you should manually adjust the folder-specific master files to remove the scripts you do not want to run.
+- If you want to re-compile the .tex and .Rmd files in the products folder you might need to do the following:
+  - In Tools > Project Options... > Sweave > select `pdfLaTeX` for Typset LaTeX;
+  - If there is already a LaTeX distribution installed but rendering .tex and .Rmd files is not working, a possible solution is to install the same tinytex version as used in the template `tinytex::install_tinytex(version = "2023.05")`;
+  - If you encounter missing package errors when compiling to pdf a useful solution is to run `tinytex::parse_install(here::here("products/paper/main_paper.log"))` in R (substituting the file name and path with the relevant for your case).
 
 List of tables and programs
 ---------------------------
