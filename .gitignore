@@ -4,3 +4,6 @@
 .Rdata
 .rds
 .Ruserdata
+.synctex.gz
+.log
+.bbl
