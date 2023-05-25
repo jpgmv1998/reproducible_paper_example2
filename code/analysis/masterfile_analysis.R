@@ -29,7 +29,7 @@ tictoc::tic(msg = "masterfile_analysis.R script", log = T)
 # RUN ALL REGRESSIONS --------------------------------------------------------------------------------------------------------------------------------
 
 # RUN REGRESSION NAME
-source(here::here("code/analysis/regression_did_analysis.R"), encoding = "UTF-8", echo = T)
+source(here::here("code/analysis/regression_did.R"), encoding = "UTF-8", echo = T)
 
 # clear all objects from global environment
 rm(list = ls())
@@ -41,21 +41,21 @@ rm(list = ls())
 # RUN PAPER MAIN RESULTS ------------------------------------------------------------------------------------------------------------------------------
 
 # GENERATE SUPPORTING STATS CITED IN-TEXT
-source(here::here("code/analysis/supportingStats_analysis.R"), encoding = "UTF-8", echo = T)
+source(here::here("code/analysis/supportingStats.R"), encoding = "UTF-8", echo = T)
 
 # clear all objects from global environment
 rm(list = ls())
 
 
 # GENERATE FIGURE 1: BALANCED EVENT-STUDY
-source(here::here("code/analysis/fig1_eventStudyBalanced_analysis.R"), encoding = "UTF-8", echo = T)
+source(here::here("code/analysis/fig1_eventStudyBalanced.R"), encoding = "UTF-8", echo = T)
 
 # clear all objects from global environment
 rm(list = ls())
 
 
 # GENERATE TABLE 1: SUMMARY STATISTCS BY TREATMENT COHORT
-source(here::here("code/analysis/tab1_summaryStat_analysis.R"), encoding = "UTF-8", echo = T)
+source(here::here("code/analysis/tab1_summaryStat.R"), encoding = "UTF-8", echo = T)
 
 # clear all objects from global environment
 rm(list = ls())
@@ -67,7 +67,7 @@ rm(list = ls())
 # RUN PAPER APPENDIX RESULTS ---------------------------------------------------------------------------------------------------------------------------
 
 # GENERATE FIGURE A1: UNBALANCED EVENT-STUDY
-source(here::here("code/analysis/figA1_eventStudyUnbalanced_analysis.R"), encoding = "UTF-8", echo = T)
+source(here::here("code/analysis/figA1_eventStudyUnbalanced.R"), encoding = "UTF-8", echo = T)
 
 # clear all objects from global environment
 rm(list = ls())

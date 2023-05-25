@@ -54,13 +54,13 @@ aux.muni.exitPriorityList <-
 sink(here::here("results/stats/supportingStats.txt"))
 
 # in-text citation 1
-print("(page X): only 21 municipalities exited the priority list ...")
+print("(page 1): only 21 municipalities exited the priority list ...")
 
 # print the statistic
 print(nrow(aux.muni.exitPriorityList))
 
 # in-text citation 2
-print("(page X): only two municipalities stayed in the list for less than 4 years")
+print("(page 1): only two municipalities stayed in the list for less than 4 years")
 
 # print the statistic
 aux.muni.exitPriorityList %>%

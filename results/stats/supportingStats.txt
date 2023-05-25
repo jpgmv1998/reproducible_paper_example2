@@ -1,22 +1,6 @@
-
-> # in-text citation 1
-> print("(page X): only 21 municipalities exited the priority list ...")
-[1] "(page X): only 21 municipalities exited the priority list ..."
-
-> # print the statistic
-> print(nrow(aux.muni.exitPriorityList))
+[1] "(page 1): only 21 municipalities exited the priority list ..."
 [1] 21
-
-> # in-text citation 2
-> print("(page X): only two municipalities stayed in the list for less than 4 years")
-[1] "(page X): only two municipalities stayed in the list for less than 4 years"
-
-> # print the statistic
-> aux.muni.exitPriorityList %>%
-+   dplyr::mutate(priorityList_activeTime = priorityList_exitYear - priorityList_entryYear) %> .... [TRUNCATED] 
+[1] "(page 1): only two municipalities stayed in the list for less than 4 years"
 priorityList_activeTime
 2 3 4 5 6 9 
 1 1 6 3 4 6 
-
-> # end printing console output to text file
-> sink()
